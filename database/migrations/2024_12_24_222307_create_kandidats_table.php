@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('kandidats', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+        $table->string('ime');
+        $table->string('prezime');
+        $table->string('email')->unique();
+        $table->string('brojTelefona');
+        $table->date('datumRodjenja');
+        $table->string('statusObuke');
+        $table->timestamps();
         });
     }
 

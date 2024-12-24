@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('tests', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+        $table->string('naziv');
+        $table->text('opis');
+        $table->integer('brojPitanja');
+        $table->integer('maxBodova');
+        $table->timestamps();
         });
     }
 

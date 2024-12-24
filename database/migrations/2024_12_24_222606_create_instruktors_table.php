@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('instruktors', function (Blueprint $table) {
             $table->id();
+            $table->string('ime');
+            $table->string('prezime');
+            $table->string('email')->unique();
+            $table->string('brojTelefona');
+            $table->string('status');
             $table->timestamps();
+    
         });
     }
 
