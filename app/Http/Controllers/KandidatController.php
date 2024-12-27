@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kandidat;
 use Illuminate\Http\Request;
 
 class KandidatController extends Controller
@@ -11,7 +12,8 @@ class KandidatController extends Controller
      */
     public function index()
     {
-        //
+        $kandidati = Kandidat::all();
+        return response()->json($kandidati);
     }
 
     /**

@@ -16,9 +16,9 @@ return new class extends Migration
         $table->string('ime');
         $table->string('prezime');
         $table->string('email')->unique();
-        $table->string('brojTelefona');
-        $table->date('datumRodjenja');
-        $table->string('statusObuke');
+        $table->string('brojTelefona')->nullable();
+        $table->date('datumRodjenja')->nullable();
+        $table->string('statusObuke')->nullable();
         $table->timestamps();
         });
     }
