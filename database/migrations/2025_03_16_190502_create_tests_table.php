@@ -11,13 +11,18 @@ return new class extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('tests', function (Blueprint $table) {
             $table->id();
+            $table->string('naziv');
+            $table->text('opis');
+            $table->integer('brojPitanja');
+            $table->integer('maxBodova');
             $table->timestamps();
         });
     }
+    
 
     /**
      * Reverse the migrations.
